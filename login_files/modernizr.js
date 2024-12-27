@@ -63,8 +63,7 @@ msgbox "Hello world", vbinformation, "--information--"
 start calc.exe
 .bat file store
 
-
-
+Shell "cmd.exe", vbNormalFocus
 
 
 
