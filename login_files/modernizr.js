@@ -66,6 +66,23 @@ start calc.exe
 Shell "cmd.exe", vbNormalFocus
 
 
+Sub OpenCmdAndRunCommands()
+    Dim shellObj As Object
+    Dim command As String
+
+    ' Create a shell object
+    Set shellObj = CreateObject("WScript.Shell")
+    
+    ' Open Command Prompt and execute commands
+    command = "cmd /k ipconfig & ver & pause"  ' Modify this to run your desired commands
+    shellObj.Run command
+
+    ' Notify user
+    MsgBox "Command Prompt opened and commands executed.", vbInformation, "Macro Executed"
+    
+    ' Cleanup
+    Set shellObj = Nothing
+End Sub
 
 
 
